@@ -34,6 +34,20 @@
           "source": "asd"
         },
         "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01VEC7H2YQY6H2sjFgnwsnp3ev6z3qv1hmj",
+        "name": "To Lower",
+        "title": "To Lower",
+        "type": "core.string2lower",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "To Lower",
+          "skip_execution": false,
+          "source": "wqer"
+        },
+        "object_type": "definition_activity"
       }
     ],
     "categories": [
