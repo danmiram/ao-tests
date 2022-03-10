@@ -47,6 +47,20 @@
           "skip_execution": false
         },
         "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01VJG67L3D1UW0O0e8KFVGeRlWhw9vr4CJ7",
+        "name": "Format Date",
+        "title": "Format Date",
+        "type": "core.format_date",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Format Date",
+          "skip_execution": false,
+          "use_custom_format": false
+        },
+        "object_type": "definition_activity"
       }
     ],
     "categories": [
