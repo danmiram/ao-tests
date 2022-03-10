@@ -1,0 +1,96 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_01VJLFPC2DGIW5aBFwiDbV491mGGLySNLzH",
+    "name": "test parent",
+    "title": "test parent",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": null,
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "test parent",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "no_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_01VJLFWS6HKYG44yftgCmg7vDP79UaNhcuX",
+        "name": "test child",
+        "title": "test child",
+        "type": "workflow.sub_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "display_name": "test child",
+          "runtime_user": {
+            "target_default": true
+          },
+          "target": {
+            "no_target": true
+          },
+          "workflow_id": "definition_workflow_01VJLFB52X0Y80GY7MPn8w5nGPY54KZe8Zt",
+          "workflow_name": "test child"
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "subworkflows": [
+    {
+      "workflow": {
+        "unique_name": "definition_workflow_01VJLFB52X0Y80GY7MPn8w5nGPY54KZe8Zt",
+        "name": "test child",
+        "title": "test child",
+        "type": "generic.workflow",
+        "base_type": "workflow",
+        "variables": null,
+        "properties": {
+          "atomic": {
+            "is_atomic": false
+          },
+          "delete_workflow_instance": false,
+          "display_name": "test child",
+          "runtime_user": {
+            "target_default": true
+          },
+          "target": {
+            "no_target": true
+          }
+        },
+        "object_type": "definition_workflow",
+        "actions": [
+          {
+            "unique_name": "definition_activity_01VJLFL41BTE84GTU7mj2ggUpuEgcXtuMnR",
+            "name": "To Lower",
+            "title": "To Lower",
+            "type": "core.string2lower",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "To Lower",
+              "skip_execution": false,
+              "source": "asd"
+            },
+            "object_type": "definition_activity"
+          }
+        ],
+        "categories": [
+          "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+        ]
+      }
+    }
+  ],
+  "dependent_workflows": [
+    "definition_workflow_01VJLFB52X0Y80GY7MPn8w5nGPY54KZe8Zt"
+  ]
+}
