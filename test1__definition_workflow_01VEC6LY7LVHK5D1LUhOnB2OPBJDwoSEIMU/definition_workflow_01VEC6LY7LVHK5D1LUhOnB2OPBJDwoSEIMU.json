@@ -61,6 +61,19 @@
           "use_custom_format": false
         },
         "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01VJJUZC9W57K4gGIFgWsdlFhNAQkukDC1Y",
+        "name": "Sleep",
+        "title": "Sleep",
+        "type": "core.sleep",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Sleep",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity"
       }
     ],
     "categories": [
