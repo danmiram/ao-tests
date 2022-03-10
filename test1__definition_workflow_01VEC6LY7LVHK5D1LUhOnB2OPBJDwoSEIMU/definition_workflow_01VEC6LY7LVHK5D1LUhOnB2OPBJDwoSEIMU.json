@@ -63,14 +63,14 @@
         "object_type": "definition_activity"
       },
       {
-        "unique_name": "definition_activity_01VJJUZC9W57K4gGIFgWsdlFhNAQkukDC1Y",
-        "name": "Sleep",
-        "title": "Sleep",
-        "type": "core.sleep",
+        "unique_name": "definition_activity_01VJLCNVQEWV43lutfZlpQ573PVb8KJNhAR",
+        "name": "Replace String",
+        "title": "Replace String",
+        "type": "core.replacestring",
         "base_type": "activity",
         "properties": {
           "continue_on_failure": false,
-          "display_name": "Sleep",
+          "display_name": "Replace String",
           "skip_execution": false
         },
         "object_type": "definition_activity"
