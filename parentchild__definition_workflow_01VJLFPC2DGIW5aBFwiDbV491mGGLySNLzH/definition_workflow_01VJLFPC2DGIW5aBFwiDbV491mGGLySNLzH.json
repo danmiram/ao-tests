@@ -39,6 +39,19 @@
           "workflow_name": "test child"
         },
         "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01VJLLRD8MJLC7Afu6snJFuimqg51JQ7MCd",
+        "name": "Substring",
+        "title": "Substring",
+        "type": "core.substring",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Substring",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity"
       }
     ],
     "categories": [
