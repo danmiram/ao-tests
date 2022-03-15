@@ -45,51 +45,6 @@
       "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
     ]
   },
-  "subworkflows": [
-    {
-      "workflow": {
-        "unique_name": "definition_workflow_01VNNHO8A0NDC1cO6A37sr6gycbh4tUHW8p",
-        "name": "new child",
-        "title": "new child",
-        "type": "generic.workflow",
-        "base_type": "workflow",
-        "variables": null,
-        "properties": {
-          "atomic": {
-            "is_atomic": false
-          },
-          "delete_workflow_instance": false,
-          "display_name": "new child",
-          "runtime_user": {
-            "target_default": true
-          },
-          "target": {
-            "no_target": true
-          }
-        },
-        "object_type": "definition_workflow",
-        "actions": [
-          {
-            "unique_name": "definition_activity_01VNNHXO3WMYW6LUrhZY8FZaAY7Fv0NUWOA",
-            "name": "To Lower",
-            "title": "To Lower",
-            "type": "core.string2lower",
-            "base_type": "activity",
-            "properties": {
-              "continue_on_failure": false,
-              "display_name": "To Lower",
-              "skip_execution": false,
-              "source": "asd"
-            },
-            "object_type": "definition_activity"
-          }
-        ],
-        "categories": [
-          "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
-        ]
-      }
-    }
-  ],
   "dependent_workflows": [
     "definition_workflow_01VNNHO8A0NDC1cO6A37sr6gycbh4tUHW8p"
   ]
