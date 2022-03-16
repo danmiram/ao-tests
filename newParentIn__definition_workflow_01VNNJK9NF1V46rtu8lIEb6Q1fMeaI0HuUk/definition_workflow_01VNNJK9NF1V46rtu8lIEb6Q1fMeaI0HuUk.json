@@ -39,6 +39,55 @@
           "workflow_name": "new child"
         },
         "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01VOFQEBF0IU07QmCmDdKNfChlqu7E9C3sz",
+        "name": "Group",
+        "title": "Group",
+        "type": "logic.group",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Group",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "actions": [
+          {
+            "unique_name": "definition_activity_01VOFQHG2LBDS5YU4vU6z8hCt0DGF2LcFWJ",
+            "name": "Group",
+            "title": "Group",
+            "type": "logic.group",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Group",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01VOFQMFHIJ9S635ECnb2NIslW6mmKi5W1u",
+                "name": "new child 2",
+                "title": "new child 2",
+                "type": "workflow.sub_workflow",
+                "base_type": "subworkflow",
+                "properties": {
+                  "display_name": "new child 2",
+                  "runtime_user": {
+                    "target_default": true
+                  },
+                  "target": {
+                    "no_target": true
+                  },
+                  "workflow_id": "definition_workflow_01VOFP7VBW3PK4RjKG6AeQzHFKUH36AXUBs",
+                  "workflow_name": "new child 2"
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          }
+        ]
       }
     ],
     "categories": [
@@ -46,6 +95,7 @@
     ]
   },
   "dependent_workflows": [
-    "definition_workflow_01VNNHO8A0NDC1cO6A37sr6gycbh4tUHW8p"
+    "definition_workflow_01VNNHO8A0NDC1cO6A37sr6gycbh4tUHW8p",
+    "definition_workflow_01VOFP7VBW3PK4RjKG6AeQzHFKUH36AXUBs"
   ]
 }
