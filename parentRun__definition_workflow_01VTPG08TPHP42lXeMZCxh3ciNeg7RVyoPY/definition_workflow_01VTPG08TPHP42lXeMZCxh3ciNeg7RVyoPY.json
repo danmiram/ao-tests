@@ -5,7 +5,34 @@
     "title": "parent run",
     "type": "generic.workflow",
     "base_type": "workflow",
-    "variables": null,
+    "variables": [
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 2,
+          "scope": "local",
+          "name": "two",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01VTPVD0NUBJC4GVs3XJ13hvY16cf0asnej",
+        "object_type": "variable_workflow"
+      },
+      {
+        "schema_id": "datatype.integer",
+        "properties": {
+          "value": 1,
+          "scope": "local",
+          "name": "one",
+          "type": "datatype.integer",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01VTPV6TOASBK1xheg29nytg1TsBd0YahCi",
+        "object_type": "variable_workflow"
+      }
+    ],
     "properties": {
       "atomic": {
         "is_atomic": false
@@ -22,42 +49,148 @@
     "object_type": "definition_workflow",
     "actions": [
       {
-        "unique_name": "definition_activity_01VTPI5YEXAEG0E7T9TTOFM1inUW082BpfN",
-        "name": "child run",
-        "title": "child run",
-        "type": "workflow.sub_workflow",
-        "base_type": "subworkflow",
+        "unique_name": "definition_activity_01VTPVFNTFTM026vimfJeaAeiJ3JhM771I5",
+        "name": "Condition Block",
+        "title": "Condition Block",
+        "type": "logic.if_else",
+        "base_type": "activity",
         "properties": {
-          "display_name": "child run",
-          "runtime_user": {
-            "target_default": true
-          },
-          "target": {
-            "no_target": true
-          },
-          "workflow_id": "definition_workflow_01VTPDO5O26U072AjmW08wpqaAILqm0ZYoT",
-          "workflow_name": "child run"
+          "continue_on_failure": false,
+          "display_name": "Condition Block",
+          "skip_execution": false
         },
-        "object_type": "definition_activity"
+        "object_type": "definition_activity",
+        "blocks": [
+          {
+            "unique_name": "definition_activity_01VTPVFZAGKAW3ZoLbZEbO5NSuOqTHjwMGU",
+            "name": "Condition Branch",
+            "title": "Condition Branch",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": "$workflow.definition_workflow_01VTPG08TPHP42lXeMZCxh3ciNeg7RVyoPY.local.variable_workflow_01VTPV6TOASBK1xheg29nytg1TsBd0YahCi$",
+                "operator": "eq",
+                "right_operand": 1
+              },
+              "continue_on_failure": false,
+              "display_name": "Condition Branch",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01VTPI5YEXAEG0E7T9TTOFM1inUW082BpfN",
+                "name": "child run",
+                "title": "child run",
+                "type": "workflow.sub_workflow",
+                "base_type": "subworkflow",
+                "properties": {
+                  "display_name": "child run",
+                  "runtime_user": {
+                    "target_default": true
+                  },
+                  "target": {
+                    "no_target": true
+                  },
+                  "workflow_id": "definition_workflow_01VTPDO5O26U072AjmW08wpqaAILqm0ZYoT",
+                  "workflow_name": "child run"
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          },
+          {
+            "unique_name": "definition_activity_01VTPVGA1DWBK0yyfmo7ejDdhucjQElEV8s",
+            "name": "Condition Branch",
+            "title": "Condition Branch",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": "$workflow.definition_workflow_01VTPG08TPHP42lXeMZCxh3ciNeg7RVyoPY.local.variable_workflow_01VTPV6TOASBK1xheg29nytg1TsBd0YahCi$",
+                "operator": "eq",
+                "right_operand": 2
+              },
+              "continue_on_failure": false,
+              "display_name": "Condition Branch",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          }
+        ]
       },
       {
-        "unique_name": "definition_activity_01VTPHJIDZTBC4o5kbfZ7KOmat3AC32OHEW",
-        "name": "child atomic run",
-        "title": "child atomic run",
-        "type": "workflow.atomic_workflow",
-        "base_type": "subworkflow",
+        "unique_name": "definition_activity_01VTPVJ646WNS1xUjZH0Rd1nrS1jBLrQrZM",
+        "name": "Condition Block",
+        "title": "Condition Block",
+        "type": "logic.if_else",
+        "base_type": "activity",
         "properties": {
-          "display_name": "child atomic run",
-          "runtime_user": {
-            "target_default": true
-          },
-          "target": {
-            "no_target": true
-          },
-          "workflow_id": "definition_workflow_01VTPE870XFM05tNJhgTgchD5ICbnu9KBd8",
-          "workflow_name": "child atomic run"
+          "continue_on_failure": false,
+          "display_name": "Condition Block",
+          "skip_execution": false
         },
-        "object_type": "definition_activity"
+        "object_type": "definition_activity",
+        "blocks": [
+          {
+            "unique_name": "definition_activity_01VTPVJ65GWIW1am8rnoL2LvOh7FZzK0DTQ",
+            "name": "Condition Branch",
+            "title": "Condition Branch",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": "$workflow.definition_workflow_01VTPG08TPHP42lXeMZCxh3ciNeg7RVyoPY.local.variable_workflow_01VTPVD0NUBJC4GVs3XJ13hvY16cf0asnej$",
+                "operator": "eq",
+                "right_operand": 1
+              },
+              "continue_on_failure": false,
+              "display_name": "Condition Branch",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_01VTPVJ678HVK7PkCsg6a23Quc5nZ1Wx9Dh",
+            "name": "Condition Branch",
+            "title": "Condition Branch",
+            "type": "logic.condition_block",
+            "base_type": "activity",
+            "properties": {
+              "condition": {
+                "left_operand": "$workflow.definition_workflow_01VTPG08TPHP42lXeMZCxh3ciNeg7RVyoPY.local.variable_workflow_01VTPVD0NUBJC4GVs3XJ13hvY16cf0asnej$",
+                "operator": "eq",
+                "right_operand": 2
+              },
+              "continue_on_failure": false,
+              "display_name": "Condition Branch",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity",
+            "actions": [
+              {
+                "unique_name": "definition_activity_01VTPHJIDZTBC4o5kbfZ7KOmat3AC32OHEW",
+                "name": "child atomic run",
+                "title": "child atomic run",
+                "type": "workflow.atomic_workflow",
+                "base_type": "subworkflow",
+                "properties": {
+                  "display_name": "child atomic run",
+                  "runtime_user": {
+                    "target_default": true
+                  },
+                  "target": {
+                    "no_target": true
+                  },
+                  "workflow_id": "definition_workflow_01VTPE870XFM05tNJhgTgchD5ICbnu9KBd8",
+                  "workflow_name": "child atomic run"
+                },
+                "object_type": "definition_activity"
+              }
+            ]
+          }
+        ]
       }
     ],
     "categories": [
