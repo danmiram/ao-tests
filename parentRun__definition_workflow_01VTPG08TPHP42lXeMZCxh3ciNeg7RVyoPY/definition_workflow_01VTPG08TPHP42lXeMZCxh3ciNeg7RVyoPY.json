@@ -22,6 +22,25 @@
     "object_type": "definition_workflow",
     "actions": [
       {
+        "unique_name": "definition_activity_01VTPI5YEXAEG0E7T9TTOFM1inUW082BpfN",
+        "name": "child run",
+        "title": "child run",
+        "type": "workflow.sub_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "display_name": "child run",
+          "runtime_user": {
+            "target_default": true
+          },
+          "target": {
+            "no_target": true
+          },
+          "workflow_id": "definition_workflow_01VTPDO5O26U072AjmW08wpqaAILqm0ZYoT",
+          "workflow_name": "child run"
+        },
+        "object_type": "definition_activity"
+      },
+      {
         "unique_name": "definition_activity_01VTPHJIDZTBC4o5kbfZ7KOmat3AC32OHEW",
         "name": "child atomic run",
         "title": "child atomic run",
@@ -49,6 +68,7 @@
     "definition_workflow_01VTPE870XFM05tNJhgTgchD5ICbnu9KBd8"
   ],
   "dependent_workflows": [
+    "definition_workflow_01VTPDO5O26U072AjmW08wpqaAILqm0ZYoT",
     "definition_workflow_01VTPE870XFM05tNJhgTgchD5ICbnu9KBd8"
   ]
 }
