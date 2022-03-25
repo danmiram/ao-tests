@@ -1,0 +1,51 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_01VW1OPHQ7TQG1q0nBfLSt4uEmc6a0qI6kX",
+    "name": "fn parent",
+    "title": "fn parent",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": null,
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "fn parent",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "no_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_01VW1OW4PWTUO0ffrnNNaihm52bJn6llqtC",
+        "name": "fn child",
+        "title": "fn child",
+        "type": "workflow.sub_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "display_name": "fn child",
+          "runtime_user": {
+            "target_default": true
+          },
+          "target": {
+            "no_target": true
+          },
+          "workflow_id": "definition_workflow_01VW1LZD9FQJC7X6HX6YSClRbkWvEYWAa2c",
+          "workflow_name": "fn child"
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "dependent_workflows": [
+    "definition_workflow_01VW1LZD9FQJC7X6HX6YSClRbkWvEYWAa2c"
+  ]
+}
