@@ -34,6 +34,20 @@
           "sleep_interval": 1
         },
         "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01VW1N5OD0IAW1YlwbuyKDSSMnDfneGBxXq",
+        "name": "To Upper",
+        "title": "To Upper",
+        "type": "core.string2upper",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "To Upper",
+          "skip_execution": false,
+          "source": "asd"
+        },
+        "object_type": "definition_activity"
       }
     ],
     "categories": [
