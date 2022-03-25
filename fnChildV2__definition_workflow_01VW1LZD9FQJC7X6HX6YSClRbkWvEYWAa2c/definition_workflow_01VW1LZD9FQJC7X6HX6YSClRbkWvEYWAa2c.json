@@ -1,0 +1,62 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_01VW1LZD9FQJC7X6HX6YSClRbkWvEYWAa2c",
+    "name": "fn child",
+    "title": "fn child",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "asd",
+          "scope": "local",
+          "name": "ss",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01VW1NZU32UFC1dTjzfJsb3mzF4e0h6xSE3",
+        "object_type": "variable_workflow"
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "fn child",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "no_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_01VW1O1LQX0NC7djqO9FmgFLAO42hf0ojwY",
+        "name": "Set Variables",
+        "title": "Set Variables",
+        "type": "core.set_multiple_variables",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Set Variables",
+          "skip_execution": false,
+          "variables_to_update": [
+            {
+              "variable_to_update": "$workflow.definition_workflow_01VW1LZD9FQJC7X6HX6YSClRbkWvEYWAa2c.local.variable_workflow_01VW1NZU32UFC1dTjzfJsb3mzF4e0h6xSE3$",
+              "variable_value_new": "eqr"
+            }
+          ]
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  }
+}
