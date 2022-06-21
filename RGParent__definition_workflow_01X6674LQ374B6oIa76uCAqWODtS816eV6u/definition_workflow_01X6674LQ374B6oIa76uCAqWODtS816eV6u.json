@@ -1,0 +1,87 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_01X6674LQ374B6oIa76uCAqWODtS816eV6u",
+    "name": "Copy(1)-RG parent - SubWF action with input Token",
+    "title": "Copy(1)-RG parent - SubWF action with input Token",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "token",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_01X6674M0HP7M1dGTY1akglBfKhDPAwZqe6",
+        "object_type": "variable_workflow"
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "Copy(1)-RG parent - SubWF action with input Token",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "target_type": "web-service.endpoint",
+        "specify_on_workflow_start": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_01X6675EOXOML5Xg3aONy5Erskx8H1Q6rCx",
+        "name": "Sleep",
+        "title": "Sleep",
+        "type": "core.sleep",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Sleep",
+          "skip_execution": false,
+          "sleep_interval": 15
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_01X6675FUPGC73ojpk4pAANNcyMHMWCjeqz",
+        "name": "Copy(1)-CA - Automation  Global Variables API's - HTTP",
+        "title": "Copy(1)-CA - Automation  Global Variables API's - HTTP",
+        "type": "workflow.sub_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Copy(1)-CA - Automation  Global Variables API's - HTTP",
+          "input": {
+            "variable_workflow_01X6674PGSTXR1PC24rKizCJNKVXUWHTKkM": "Bearer $workflow.definition_workflow_01X6674LQ374B6oIa76uCAqWODtS816eV6u.input.variable_workflow_01X6674M0HP7M1dGTY1akglBfKhDPAwZqe6$",
+            "variable_workflow_01X6674PGTLCQ61hakxhrRoW481e5KC84bB": true
+          },
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "target_type": "web-service.endpoint",
+            "use_workflow_target": true
+          },
+          "workflow_id": "definition_workflow_01X6674P8YL896CLmIn6QoC4IIT177aOLGX",
+          "workflow_name": "Copy(2)-A - Automation  Global Variables API's - HTTP"
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "dependent_workflows": [
+    "definition_workflow_01X6674P8YL896CLmIn6QoC4IIT177aOLGX"
+  ]
+}
