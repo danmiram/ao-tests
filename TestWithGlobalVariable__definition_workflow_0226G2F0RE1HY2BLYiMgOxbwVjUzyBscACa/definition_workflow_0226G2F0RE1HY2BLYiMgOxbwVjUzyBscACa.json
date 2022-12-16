@@ -1,0 +1,90 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_0226G2F0RE1HY2BLYiMgOxbwVjUzyBscACa",
+    "name": "DM Global Variable",
+    "title": "DM Global Variable",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "datatype.secure_string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "SS",
+          "type": "datatype.secure_string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_0226G3P6PKE932gJnWBQkSCgcGhVJW1bjo8",
+        "object_type": "variable_workflow"
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "DM Global Variable",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "no_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_0226G2RNEBVRD5imsXOzYV8BdLwKQqYUDqM",
+        "name": "Sleep",
+        "title": "Sleep",
+        "type": "core.sleep",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Sleep",
+          "skip_execution": false,
+          "sleep_interval": 1
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_0226G3SL6401X0mArlBFV6WYh4m8xstQ3Fp",
+        "name": "Set Variables",
+        "title": "Set Variables",
+        "type": "core.set_multiple_variables",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Set Variables",
+          "skip_execution": false,
+          "variables_to_update": [
+            {
+              "variable_to_update": "$workflow.definition_workflow_0226G2F0RE1HY2BLYiMgOxbwVjUzyBscACa.local.variable_workflow_0226G3P6PKE932gJnWBQkSCgcGhVJW1bjo8$",
+              "variable_value_new": "$global.variable_0226G36U0F42N65QD6UPMkuuDp9PVi5m7GB.global.variable_0226G36U0F42N65QD6UPMkuuDp9PVi5m7GB$"
+            }
+          ]
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "variables": {
+    "variable_0226G36U0F42N65QD6UPMkuuDp9PVi5m7GB": {
+      "unique_name": "variable_0226G36U0F42N65QD6UPMkuuDp9PVi5m7GB",
+      "properties": {
+        "value": "*****",
+        "scope": "global",
+        "name": "DM SS",
+        "type": "datatype.secure_string",
+        "is_required": false,
+        "is_invisible": false
+      },
+      "object_type": "variable"
+    }
+  }
+}
