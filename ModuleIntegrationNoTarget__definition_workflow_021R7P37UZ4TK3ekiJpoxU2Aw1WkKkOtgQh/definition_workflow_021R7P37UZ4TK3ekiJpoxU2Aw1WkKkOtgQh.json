@@ -57,7 +57,7 @@
           },
           "target": {
             "execute_on_this_target": true,
-            "target_id": "$module_target;SecureX Global Threat Intel;securex:ao:private_threat_intel$",
+            "target_id": "$module_target;SecureX Global Threat Intel;securex:ao:private_threat_intels$",
             "target_type": "web-service.endpoint"
           },
           "workflow_id": "definition_workflow_021R7O6OXVA4G2jEQlOpqHKhC3SXhyOWuIL",
@@ -170,6 +170,10 @@
     {
       "module_type": "Secure Endpoint",
       "external_id": "securex:ao:secure_endpoint"
+    },
+    {
+      "module_type": "SecureX Global Threat Intel",
+      "external_id": "securex:ao:private_threat_intels"
     }
   ]
 }
