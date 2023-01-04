@@ -1,0 +1,175 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_021R7P37UZ4TK3ekiJpoxU2Aw1WkKkOtgQh",
+    "name": "main",
+    "title": "main",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": null,
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "main",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "target_type": "web-service.endpoint",
+        "target_id": "$module_target;Secure Endpoint;securex:ao:secure_endpoint$",
+        "execute_on_workflow_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_021R7PJQFZOIG2PKZP3Uj7pLl1xRARAPgSQ",
+        "name": "subwf1",
+        "title": "subwf1",
+        "type": "workflow.sub_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "display_name": "subwf1",
+          "runtime_user": {
+            "target_default": true
+          },
+          "target": {
+            "execute_on_this_target": true,
+            "target_id": "$module_target;Secure Endpoint;securex:ao:secure_endpoint$",
+            "target_type": "web-service.endpoint"
+          },
+          "workflow_id": "definition_workflow_021R7N8KB9SQ81CctN1OolOORXyFkPcsnCI",
+          "workflow_name": "subwf1"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_021R7PMB0VMKW6qKyUajIe8O5lAlrIGeghj",
+        "name": "subwf2",
+        "title": "subwf2",
+        "type": "workflow.sub_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "display_name": "subwf2",
+          "runtime_user": {
+            "target_default": true
+          },
+          "target": {
+            "execute_on_this_target": true,
+            "target_id": "$module_target;SecureX Global Threat Intel;securex:ao:private_threat_intel$",
+            "target_type": "web-service.endpoint"
+          },
+          "workflow_id": "definition_workflow_021R7O6OXVA4G2jEQlOpqHKhC3SXhyOWuIL",
+          "workflow_name": "subwf2"
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "subworkflows": [
+    {
+      "workflow": {
+        "unique_name": "definition_workflow_021R7N8KB9SQ81CctN1OolOORXyFkPcsnCI",
+        "name": "subwf1",
+        "title": "subwf1",
+        "type": "generic.workflow",
+        "base_type": "workflow",
+        "variables": null,
+        "properties": {
+          "atomic": {
+            "is_atomic": false
+          },
+          "delete_workflow_instance": false,
+          "display_name": "subwf1",
+          "runtime_user": {
+            "target_default": true
+          },
+          "target": {
+            "target_type": "web-service.endpoint",
+            "target_id": "$module_target;Secure Endpoint;securex:ao:secure_endpoint$",
+            "execute_on_workflow_target": true
+          }
+        },
+        "object_type": "definition_workflow",
+        "actions": [
+          {
+            "unique_name": "definition_activity_021R7NZX0EOZ46ouw4rdHfSKHxGSnqoL26x",
+            "name": "Sleep",
+            "title": "Sleep",
+            "type": "core.sleep",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Sleep",
+              "skip_execution": false,
+              "sleep_interval": 1
+            },
+            "object_type": "definition_activity"
+          }
+        ],
+        "categories": [
+          "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+        ]
+      }
+    },
+    {
+      "workflow": {
+        "unique_name": "definition_workflow_021R7O6OXVA4G2jEQlOpqHKhC3SXhyOWuIL",
+        "name": "subwf2",
+        "title": "subwf2",
+        "type": "generic.workflow",
+        "base_type": "workflow",
+        "variables": null,
+        "properties": {
+          "atomic": {
+            "is_atomic": false
+          },
+          "delete_workflow_instance": false,
+          "display_name": "subwf2",
+          "runtime_user": {
+            "target_default": true
+          },
+          "target": {
+            "target_type": "web-service.endpoint",
+            "target_id": "$module_target;SecureX Global Threat Intel;securex:ao:private_threat_intel$",
+            "execute_on_workflow_target": true
+          }
+        },
+        "object_type": "definition_workflow",
+        "actions": [
+          {
+            "unique_name": "definition_activity_021R7OYOBCZA81me5gsOWr6JPS896os7bPe",
+            "name": "Sleep",
+            "title": "Sleep",
+            "type": "core.sleep",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Sleep",
+              "skip_execution": false,
+              "sleep_interval": 1
+            },
+            "object_type": "definition_activity"
+          }
+        ],
+        "categories": [
+          "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+        ]
+      }
+    }
+  ],
+  "dependent_workflows": [
+    "definition_workflow_021R7N8KB9SQ81CctN1OolOORXyFkPcsnCI",
+    "definition_workflow_021R7O6OXVA4G2jEQlOpqHKhC3SXhyOWuIL"
+  ],
+  "module_targets": [
+    {
+      "module_type": "Secure Endpoint",
+      "external_id": "securex:ao:secure_endpoint"
+    }
+  ]
+}
