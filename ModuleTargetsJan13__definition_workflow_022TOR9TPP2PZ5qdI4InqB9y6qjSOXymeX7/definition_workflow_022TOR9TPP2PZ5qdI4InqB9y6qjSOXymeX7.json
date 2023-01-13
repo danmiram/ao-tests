@@ -1,0 +1,145 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_022TOR9TPP2PZ5qdI4InqB9y6qjSOXymeX7",
+    "name": "daniel main",
+    "title": "daniel main",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": null,
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "daniel main",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "no_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_022TORHPV177P13lUQpIqbrvZCT4GtBf4CD",
+        "name": "HTTP Request",
+        "title": "HTTP Request",
+        "type": "web-service.http_request",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "allow_auto_redirect": true,
+          "allow_headers_redirect": false,
+          "continue_on_error_status_code": false,
+          "continue_on_failure": false,
+          "display_name": "HTTP Request",
+          "method": "GET",
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "override_workflow_target": true,
+            "target_id": "$module_target;SecureX Global Threat Intel;securex:ao:private_threat_intel$"
+          }
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_022TORTAJM1J96ReboulmIx31O2H9x2VlFF",
+        "name": "daniel sub",
+        "title": "daniel sub",
+        "type": "workflow.sub_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "display_name": "daniel sub",
+          "runtime_user": {
+            "target_default": true
+          },
+          "target": {
+            "execute_on_this_target": true,
+            "target_id": "$module_target;Secure Endpoint;securex:ao:secure_endpoint$",
+            "target_type": "web-service.endpoint"
+          },
+          "workflow_id": "definition_workflow_022TOQJS9SSVA2QBruiCj2Eep5qcd0uarv0",
+          "workflow_name": "daniel sub"
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "subworkflows": [
+    {
+      "workflow": {
+        "unique_name": "definition_workflow_022TOQJS9SSVA2QBruiCj2Eep5qcd0uarv0",
+        "name": "daniel sub",
+        "title": "daniel sub",
+        "type": "generic.workflow",
+        "base_type": "workflow",
+        "variables": null,
+        "properties": {
+          "atomic": {
+            "is_atomic": false
+          },
+          "delete_workflow_instance": false,
+          "display_name": "daniel sub",
+          "runtime_user": {
+            "target_default": true
+          },
+          "target": {
+            "target_type": "web-service.endpoint",
+            "target_id": "$module_target;Secure Endpoint;securex:ao:secure_endpoint$",
+            "execute_on_workflow_target": true
+          }
+        },
+        "object_type": "definition_workflow",
+        "actions": [
+          {
+            "unique_name": "definition_activity_022TOR1HZRH5H3oJnd94WWgpH67zw8cWcrY",
+            "name": "HTTP Request",
+            "title": "HTTP Request",
+            "type": "web-service.http_request",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "allow_auto_redirect": true,
+              "allow_headers_redirect": false,
+              "continue_on_error_status_code": false,
+              "continue_on_failure": false,
+              "display_name": "HTTP Request",
+              "method": "GET",
+              "runtime_user": {
+                "target_default": true
+              },
+              "skip_execution": false,
+              "target": {
+                "use_workflow_target": true
+              }
+            },
+            "object_type": "definition_activity"
+          }
+        ],
+        "categories": [
+          "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+        ]
+      }
+    }
+  ],
+  "dependent_workflows": [
+    "definition_workflow_022TOQJS9SSVA2QBruiCj2Eep5qcd0uarv0"
+  ],
+  "module_targets": [
+    {
+      "module_type": "Secure Endpoint",
+      "external_id": "securex:ao:secure_endpoint"
+    },
+    {
+      "module_type": "SecureX Global Threat Intel",
+      "external_id": "securex:ao:private_threat_intel"
+    }
+  ]
+}
