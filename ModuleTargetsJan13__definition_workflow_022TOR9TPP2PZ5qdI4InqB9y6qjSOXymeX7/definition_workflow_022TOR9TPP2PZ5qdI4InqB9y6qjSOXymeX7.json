@@ -5,7 +5,21 @@
     "title": "daniel main",
     "type": "generic.workflow",
     "base_type": "workflow",
-    "variables": null,
+    "variables": [
+      {
+        "schema_id": "datatype.secure_string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "Test",
+          "type": "datatype.secure_string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_024KHLWE4WKEH6Xxxrd5DI1eCmPAjynZaMm",
+        "object_type": "variable_workflow"
+      }
+    ],
     "properties": {
       "atomic": {
         "is_atomic": false
@@ -66,11 +80,44 @@
           "workflow_name": "daniel sub"
         },
         "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_024KHLL2BYIKL248Mi5DGujRslQwcGIn5fR",
+        "name": "Set Variables",
+        "title": "Set Variables",
+        "type": "core.set_multiple_variables",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Set Variables",
+          "skip_execution": false,
+          "variables_to_update": [
+            {
+              "variable_to_update": "$workflow.definition_workflow_022TOR9TPP2PZ5qdI4InqB9y6qjSOXymeX7.local.variable_workflow_024KHLWE4WKEH6Xxxrd5DI1eCmPAjynZaMm$",
+              "variable_value_new": "$global.variable_024KFATIC5G5D6bRrQlAocuyDzvY5ACVtlN.global.variable_024KFATIC5G5D6bRrQlAocuyDzvY5ACVtlN$"
+            }
+          ]
+        },
+        "object_type": "definition_activity"
       }
     ],
     "categories": [
       "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
     ]
+  },
+  "variables": {
+    "variable_024KFATIC5G5D6bRrQlAocuyDzvY5ACVtlN": {
+      "unique_name": "variable_024KFATIC5G5D6bRrQlAocuyDzvY5ACVtlN",
+      "properties": {
+        "value": "*****",
+        "scope": "global",
+        "name": "DM Test",
+        "type": "datatype.secure_string",
+        "is_required": false,
+        "is_invisible": false
+      },
+      "object_type": "variable"
+    }
   },
   "subworkflows": [
     {
