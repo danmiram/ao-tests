@@ -7,6 +7,19 @@
     "base_type": "workflow",
     "variables": [
       {
+        "schema_id": "datatype.secure_string",
+        "properties": {
+          "value": "*****",
+          "scope": "local",
+          "name": "Key",
+          "type": "datatype.secure_string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_0268OV9L95KNT7UDNMXb8In7GSClyLJoHl5",
+        "object_type": "variable_workflow"
+      },
+      {
         "schema_id": "datatype.string",
         "properties": {
           "value": "",
@@ -24,12 +37,12 @@
         "properties": {
           "value": "*****",
           "scope": "local",
-          "name": "Key",
+          "name": "Key 3",
           "type": "datatype.secure_string",
           "is_required": false,
           "is_invisible": false
         },
-        "unique_name": "variable_workflow_0268OV9L95KNT7UDNMXb8In7GSClyLJoHl5",
+        "unique_name": "variable_workflow_0268PTKILZ2TJ74PvphC9PPhku4NrB4fKsG",
         "object_type": "variable_workflow"
       },
       {
@@ -520,11 +533,6 @@
       "display_name": "Import Workflow",
       "columns": [
         {
-          "name": "RealativeURL",
-          "title": "Realative URL",
-          "type": "string"
-        },
-        {
           "name": "RequestBody",
           "title": "Request Body",
           "type": "string"
@@ -532,6 +540,11 @@
         {
           "name": "WorkflowName",
           "title": "Workflow Name",
+          "type": "string"
+        },
+        {
+          "name": "RealativeURL",
+          "title": "Realative URL",
           "type": "string"
         }
       ],
@@ -551,14 +564,40 @@
           {
             "schema_id": "datatype.string",
             "properties": {
-              "value": "Authorization",
-              "scope": "local",
-              "name": "Authorization",
+              "value": "",
+              "scope": "output",
+              "name": "All Action True/False",
               "type": "datatype.string",
               "is_required": false,
               "is_invisible": false
             },
-            "unique_name": "variable_workflow_0268OV9OP6QTF12fftpOpq8t7qmX1TZIdAB",
+            "unique_name": "variable_workflow_0268OV9OP70LB4nVeC2vDpLtqS0F8AaPRRI",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "output",
+              "name": "Condition Block 1",
+              "type": "datatype.string",
+              "is_required": false,
+              "is_invisible": false
+            },
+            "unique_name": "variable_workflow_0268OV9OP63ML0ISojqKF2QcdgP0Q36sEnU",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "output",
+              "name": "Email Table",
+              "type": "datatype.string",
+              "is_required": false,
+              "is_invisible": false
+            },
+            "unique_name": "variable_workflow_0268OV9OP6H1N2U7HyrnHEKNtorKnVPDr0i",
             "object_type": "variable_workflow"
           },
           {
@@ -605,40 +644,14 @@
           {
             "schema_id": "datatype.string",
             "properties": {
-              "value": "",
-              "scope": "output",
-              "name": "Email Table",
+              "value": "Authorization",
+              "scope": "local",
+              "name": "Authorization",
               "type": "datatype.string",
               "is_required": false,
               "is_invisible": false
             },
-            "unique_name": "variable_workflow_0268OV9OP6H1N2U7HyrnHEKNtorKnVPDr0i",
-            "object_type": "variable_workflow"
-          },
-          {
-            "schema_id": "datatype.string",
-            "properties": {
-              "value": "",
-              "scope": "output",
-              "name": "Condition Block 1",
-              "type": "datatype.string",
-              "is_required": false,
-              "is_invisible": false
-            },
-            "unique_name": "variable_workflow_0268OV9OP63ML0ISojqKF2QcdgP0Q36sEnU",
-            "object_type": "variable_workflow"
-          },
-          {
-            "schema_id": "datatype.string",
-            "properties": {
-              "value": "",
-              "scope": "output",
-              "name": "All Action True/False",
-              "type": "datatype.string",
-              "is_required": false,
-              "is_invisible": false
-            },
-            "unique_name": "variable_workflow_0268OV9OP70LB4nVeC2vDpLtqS0F8AaPRRI",
+            "unique_name": "variable_workflow_0268OV9OP6QTF12fftpOpq8t7qmX1TZIdAB",
             "object_type": "variable_workflow"
           }
         ],
