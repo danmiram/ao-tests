@@ -1,0 +1,113 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_02369YUZR0E9F6Q0AWmfeGfuzLYEUqxXoWB",
+    "name": "DM Test",
+    "title": "DM Test",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": null,
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "DM Test",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "no_target": true
+      },
+      "wf_metadata": {
+        "coa": {
+          "observable_types": [
+            "email",
+            "ip",
+            "user"
+          ]
+        }
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_027S7P0LI3GPU4EIo0KSnsHCDd7NjKY2w2m",
+        "name": "Read Table from Text",
+        "title": "Read Table from TextRead Table from TextRead Table from TextRead",
+        "type": "core.read_table_from_text",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "continue_on_failure": false,
+          "delimiters": [
+            {
+              "delimiter": ","
+            }
+          ],
+          "display_name": "Read Table from TextRead Table from TextRead Table from TextRead",
+          "input_text": "Name,Last\nJon,Smith\nClare,Robertson",
+          "persist_output": true,
+          "populate_columns": true,
+          "skip_execution": false
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_028WU4KI479SD4dFh556WMtab52CSj64jw7",
+        "name": "For Each",
+        "title": "For Each",
+        "type": "logic.for_each",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "For Each",
+          "skip_execution": false,
+          "source_array": "$activity.definition_activity_027S7P0LI3GPU4EIo0KSnsHCDd7NjKY2w2m.output.read_table_from_text$"
+        },
+        "object_type": "definition_activity",
+        "actions": [
+          {
+            "unique_name": "definition_activity_028WU4W4K9T3O3ZHKo9bwgklO1VTQuPfiKc",
+            "name": "Add Row to Table",
+            "title": "Add Row to Table",
+            "type": "core.addrowtotable",
+            "base_type": "activity",
+            "properties": {
+              "action_timeout": 180,
+              "continue_on_failure": false,
+              "display_name": "Add Row to Table",
+              "input_table": "$activity.definition_activity_027S7P0LI3GPU4EIo0KSnsHCDd7NjKY2w2m.output.read_table_from_text$",
+              "skip_execution": false
+            },
+            "object_type": "definition_activity"
+          }
+        ]
+      }
+    ],
+    "categories": [
+      "category_01TDYBFZF4JVL2rfHzHh0dxKTbSqKJR2ZlO",
+      "category_01K8NQAII212R5jdJi1LLd5SCDT9F91tvBR"
+    ]
+  },
+  "categories": {
+    "category_01K8NQAII212R5jdJi1LLd5SCDT9F91tvBR": {
+      "unique_name": "category_01K8NQAII212R5jdJi1LLd5SCDT9F91tvBR",
+      "name": "Sample Workflow",
+      "title": "Sample Workflow",
+      "type": "basic.category",
+      "base_type": "category",
+      "description": "Simple workflows that show how to use various aspects of SecureX orchestration",
+      "category_type": "system",
+      "object_type": "category"
+    },
+    "category_01TDYBFZF4JVL2rfHzHh0dxKTbSqKJR2ZlO": {
+      "unique_name": "category_01TDYBFZF4JVL2rfHzHh0dxKTbSqKJR2ZlO",
+      "name": "Common",
+      "title": "Common",
+      "type": "basic.category",
+      "base_type": "category",
+      "category_type": "system",
+      "object_type": "category"
+    }
+  }
+}
