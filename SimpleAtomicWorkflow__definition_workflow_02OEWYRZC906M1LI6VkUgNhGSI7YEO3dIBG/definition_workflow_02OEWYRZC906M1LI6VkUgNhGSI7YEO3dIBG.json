@@ -1,0 +1,49 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_02OEWYRZC906M1LI6VkUgNhGSI7YEO3dIBG",
+    "name": "DM Atomic",
+    "title": "DM Atomic",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": null,
+    "properties": {
+      "atomic": {
+        "atomic_group": "Atomic",
+        "is_atomic": true
+      },
+      "delete_workflow_instance": false,
+      "display_name": "DM Atomic",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "no_target": true
+      },
+      "wf_metadata": {
+        "coa": {
+          "callback_workflow": false
+        }
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_02OEWYUSQSPMH5EyIQv1Qms2csO1LFZ65wF",
+        "name": "Sleep",
+        "title": "Sleep",
+        "type": "core.sleep",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Sleep",
+          "skip_execution": false,
+          "sleep_interval": 1
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  }
+}
